@@ -43,7 +43,7 @@ export function Footer() {
 				{/* Giant CTA */}
 				<FadeIn delay={0.1}>
 					<div
-						className='font-display'
+						className='font-display contact-display-heading'
 						style={{
 							fontWeight: 900,
 							fontStyle: 'normal',

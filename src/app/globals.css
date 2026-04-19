@@ -407,31 +407,51 @@ button {
 	}
 
 	.section-heading {
-		font-size: clamp(1.7rem, 9.5vw, 2.5rem) !important;
+		font-size: clamp(2.05rem, 8.2vw, 2.9rem) !important;
 		line-height: 0.98 !important;
 		margin-bottom: 1rem !important;
 		letter-spacing: -0.015em !important;
-		overflow-wrap: anywhere;
+		overflow-wrap: normal !important;
+		word-break: keep-all;
+		hyphens: none;
+		text-wrap: balance;
+	}
+
+	.contact-display-heading {
+		font-size: clamp(2.05rem, 8.2vw, 2.9rem) !important;
+		line-height: 0.98 !important;
+		letter-spacing: -0.015em !important;
 	}
 
 	.section-heading-divider {
 		margin-bottom: clamp(1.4rem, 4vh, 2rem) !important;
 	}
 
-	#about,
-	#skills,
-	#projects,
-	#work,
-	#certifications {
-		padding-top: clamp(2.25rem, 5vh, 3.25rem) !important;
-		padding-bottom: clamp(2.25rem, 5vh, 3.25rem) !important;
+	section {
+		padding-top: clamp(2rem, 6vw, 3rem) !important;
+		padding-bottom: clamp(2rem, 6vw, 3rem) !important;
+		height: auto !important;
+		min-height: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
 	}
 
 	#contact {
-		padding-top: clamp(2.25rem, 5vh, 3.25rem) !important;
+		padding-top: clamp(2rem, 6vw, 3rem) !important;
+		padding-bottom: clamp(2rem, 6vw, 3rem) !important;
+		height: auto !important;
+		min-height: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+
+	#certifications {
+		padding-bottom: 1rem !important;
+		margin-bottom: 0 !important;
 	}
 
 	.footer-mobile-spacer {
-		height: 3.2vh !important;
+		display: none !important;
+		height: 0 !important;
 	}
 }
