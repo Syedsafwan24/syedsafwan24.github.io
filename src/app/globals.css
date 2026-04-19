@@ -343,9 +343,8 @@ button {
 	}
 
 	.hero-mobile {
-		min-height: unset !important;
-		height: auto !important;
-		padding-top: calc(var(--navbar-height, 60px) + 2rem);
+		min-height: 100svh;
+		padding-top: calc(var(--navbar-height, 60px) + 1rem);
 		padding-bottom: 0;
 		margin-bottom: 0;
 	}
@@ -372,7 +371,7 @@ button {
 	.hero-mobile-bottom {
 		gap: clamp(0.75rem, 3vw, 1.5rem) !important;
 		padding-bottom: 0.75rem !important;
-		margin-top: clamp(0.75rem, 3vw, 1.5rem);
+		margin-top: auto;
 	}
 
 	.ticker-mobile-wrap {
@@ -428,7 +427,7 @@ button {
 		margin-bottom: clamp(1.4rem, 4vh, 2rem) !important;
 	}
 
-	section {
+	section:not(.hero-mobile) {
 		padding-top: clamp(2rem, 6vw, 3rem) !important;
 		padding-bottom: clamp(2rem, 6vw, 3rem) !important;
 		height: auto !important;

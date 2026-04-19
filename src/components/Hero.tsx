@@ -1,20 +1,12 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { EASE } from './animation/FadeIn';
-import { useRef } from 'react';
 
 export function Hero() {
-	const sectionRef = useRef<HTMLElement>(null);
-	const { scrollYProgress } = useScroll({
-		target: sectionRef,
-		offset: ['start start', 'end start'],
-	});
-
 	return (
 		<section
-			ref={sectionRef}
-			className='relative flex flex-col justify-between pt-20 px-5 pb-10 overflow-hidden hero-mobile md:px-[3vw] md:p-0 md:m-0 md:block'
+			className='relative flex flex-col pt-20 px-5 pb-10 overflow-hidden hero-mobile md:px-[3vw] md:p-0 md:m-0 md:block'
 			style={{ height: '100svh', minHeight: '100svh' }}
 		>
 			{/* Noise Overlay */}
@@ -27,57 +19,59 @@ export function Hero() {
 			></div>
 
 			{/* ── ALL CONTENT GROUPED IN ONE CONTAINER ── */}
-			<motion.div className='relative z-10 w-full flex flex-col flex-1 justify-between hero-content-wrapper md:static md:block'>
+			<motion.div className='relative z-10 w-full flex flex-col flex-1 min-h-0 hero-content-wrapper md:static md:block'>
 				{/* Label */}
 				<motion.div
 					initial={{ opacity: 0, y: '1vh' }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
-					className='font-sans text-[min(2.2vw,0.65rem)] mb-3 md:text-[min(0.7vw,0.65rem)] tracking-[0.2em] font-light uppercase hero-mobile-label md:absolute md:top-[24vh] md:left-[4vw] md:z-20'
+					className='font-sans text-[min(2.2vw,0.65rem)] mb-1 md:mb-3 md:text-[min(0.7vw,0.65rem)] tracking-[0.2em] font-light uppercase hero-mobile-label md:absolute md:top-[24vh] md:left-[4vw] md:z-20'
 					style={{ color: 'var(--theme-heading)' }}
 				>
 					FRONTEND DEVELOPER & UI/UX DESIGNER
 				</motion.div>
 
 				{/* Name */}
-				<div
-					className='flex-1 font-display font-extrabold leading-[0.82] tracking-[-0.04em] hero-mobile-name-container md:absolute md:top-1/2 md:-translate-y-1/2 md:left-[4vw] md:right-0 md:w-full md:overflow-hidden md:flex-none'
-					style={{ color: 'var(--theme-heading)' }}
-				>
-					<motion.div
-						initial={{ opacity: 0, y: '5vh' }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{
-							delay: 0.35,
-							duration: 1.2,
-							ease: [0.16, 1, 0.3, 1],
-						}}
-						className='overflow-hidden w-full'
+				<div className='flex-1 flex items-center w-full hero-mobile-name-center md:block md:flex-none'>
+					<div
+						className='flex-none font-display font-extrabold leading-[0.82] tracking-[-0.04em] hero-mobile-name-container md:absolute md:top-1/2 md:-translate-y-1/2 md:left-[4vw] md:right-0 md:w-full md:overflow-hidden md:flex-none'
+						style={{ color: 'var(--theme-heading)' }}
 					>
-						<div
-							className='w-full whitespace-nowrap hero-mobile-name-line hero-mobile-name-line-1 text-[clamp(4.5rem,20vw,8rem)] md:text-[clamp(6rem,12vw,16rem)] md:leading-[0.85]'
-							style={{ display: 'block' }}
+						<motion.div
+							initial={{ opacity: 0, y: '5vh' }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{
+								delay: 0.35,
+								duration: 1.2,
+								ease: [0.16, 1, 0.3, 1],
+							}}
+							className='overflow-hidden w-full'
 						>
-							Syed
-						</div>
-					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: '5vh' }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{
-							delay: 0.5,
-							duration: 1.2,
-							ease: [0.16, 1, 0.3, 1],
-						}}
-						className='overflow-hidden w-full'
-					>
-						<div
-							className='w-full whitespace-nowrap hero-mobile-name-line hero-mobile-name-line-2 text-[clamp(4.5rem,20vw,8rem)] md:text-[clamp(6rem,12vw,16rem)] md:leading-[0.85]'
-							style={{ display: 'block' }}
+							<div
+								className='w-full whitespace-nowrap hero-mobile-name-line hero-mobile-name-line-1 text-[clamp(4.5rem,20vw,8rem)] md:text-[clamp(6rem,12vw,16rem)] md:leading-[0.85]'
+								style={{ display: 'block' }}
+							>
+								Syed
+							</div>
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, y: '5vh' }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{
+								delay: 0.5,
+								duration: 1.2,
+								ease: [0.16, 1, 0.3, 1],
+							}}
+							className='overflow-hidden w-full'
 						>
-							Safwan
-						</div>
-					</motion.div>
+							<div
+								className='w-full whitespace-nowrap hero-mobile-name-line hero-mobile-name-line-2 text-[clamp(4.5rem,20vw,8rem)] md:text-[clamp(6rem,12vw,16rem)] md:leading-[0.85]'
+								style={{ display: 'block' }}
+							>
+								Safwan
+							</div>
+						</motion.div>
+					</div>
 				</div>
 			</motion.div>
 
