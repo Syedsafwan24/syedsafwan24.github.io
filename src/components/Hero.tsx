@@ -1,9 +1,24 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { EASE } from './animation/FadeIn';
+import { useLoading } from './RootProvider';
 
 export function Hero() {
+	const { isLoading } = useLoading();
+	const [heroReady, setHeroReady] = useState(false);
+
+	useEffect(() => {
+		if (isLoading) {
+			setHeroReady(false);
+			return;
+		}
+
+		const timer = setTimeout(() => setHeroReady(true), 650);
+		return () => clearTimeout(timer);
+	}, [isLoading]);
+
 	return (
 		<section
 			className='relative flex flex-col pt-20 px-5 pb-10 overflow-hidden hero-mobile md:px-[3vw] md:p-0 md:m-0 md:block'
@@ -23,7 +38,7 @@ export function Hero() {
 				{/* Label */}
 				<motion.div
 					initial={{ opacity: 0, y: '1vh' }}
-					animate={{ opacity: 1, y: 0 }}
+					animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: '1vh' }}
 					transition={{ duration: 0.8, ease: EASE, delay: 0.3 }}
 					className='mt-0 md:mt-0 font-sans text-[min(2.2vw,0.65rem)] mb-1 md:mb-3 md:text-[min(0.7vw,0.65rem)] tracking-[0.2em] font-light uppercase hero-mobile-label md:absolute md:top-[24vh] md:left-[4vw] md:z-20'
 					style={{ color: 'var(--theme-heading)' }}
@@ -39,7 +54,9 @@ export function Hero() {
 					>
 						<motion.div
 							initial={{ opacity: 0, y: '5vh' }}
-							animate={{ opacity: 1, y: 0 }}
+							animate={
+								heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: '5vh' }
+							}
 							transition={{
 								delay: 0.35,
 								duration: 1.2,
@@ -56,7 +73,9 @@ export function Hero() {
 						</motion.div>
 						<motion.div
 							initial={{ opacity: 0, y: '5vh' }}
-							animate={{ opacity: 1, y: 0 }}
+							animate={
+								heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: '5vh' }
+							}
 							transition={{
 								delay: 0.5,
 								duration: 1.2,
@@ -78,7 +97,7 @@ export function Hero() {
 			{/* ── Vertical SCROLL indicator ── */}
 			<motion.div
 				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
+				animate={heroReady ? { opacity: 1 } : { opacity: 0 }}
 				transition={{ delay: 1.8 }}
 				className='absolute right-4 bottom-12 flex flex-col items-center gap-[1.5vh] z-20 hero-mobile-scroll md:right-[1.5rem] md:top-[15vh] md:translate-y-0 md:gap-[0.75rem]'
 			>
@@ -109,7 +128,7 @@ export function Hero() {
 			{/* ── BOTTOM: Bio left + Pills right ── */}
 			<motion.div
 				initial={{ opacity: 0, y: '2vh' }}
-				animate={{ opacity: 1, y: 0 }}
+				animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: '2vh' }}
 				transition={{ delay: 1, duration: 0.8, ease: EASE }}
 				className='relative z-10 w-full flex flex-col items-start mt-auto pb-12 hero-mobile-bottom md:absolute md:inset-0 md:pointer-events-none md:p-0 md:m-0'
 			>
