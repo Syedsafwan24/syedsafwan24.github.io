@@ -21,7 +21,7 @@ export function Hero() {
 
 	return (
 		<section
-			className='relative flex flex-col pt-20 px-5 pb-10 overflow-hidden hero-mobile md:px-[3vw] md:p-0 md:m-0 md:block'
+			className='relative flex flex-col pt-20 px-4 pb-10 overflow-hidden hero-mobile md:px-[3vw] md:p-0 md:m-0 md:block'
 			style={{ height: '100svh', minHeight: '100svh' }}
 		>
 			{/* Noise Overlay */}
