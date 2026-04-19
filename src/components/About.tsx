@@ -69,7 +69,7 @@ export function About() {
 			{/* Section label */}
 			<FadeIn>
 				<div
-					className='font-display uppercase tracking-[0.2em]'
+					className='font-display uppercase tracking-[0.2em] section-kicker'
 					style={{
 						fontSize: 'clamp(0.65rem, 0.8vw, 0.9rem)',
 						marginBottom: '3vh',
@@ -84,7 +84,7 @@ export function About() {
 			{/* Display heading */}
 			<FadeIn>
 				<h2
-					className='font-display'
+					className='font-display section-heading'
 					style={{
 						fontSize: 'clamp(3rem, 7vw, 7.5rem)',
 						lineHeight: 1,
@@ -97,6 +97,7 @@ export function About() {
 					About
 				</h2>
 				<div
+					className='section-heading-divider'
 					style={{
 						width: '100%',
 						height: '1px',

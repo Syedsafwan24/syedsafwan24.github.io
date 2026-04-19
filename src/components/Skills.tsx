@@ -49,10 +49,13 @@ export function Skills() {
 			}}
 		>
 			{/* Header */}
-			<div className='px-[3vw] md:px-[4vw]' style={{ marginBottom: 0 }}>
+			<div
+				className='px-[3vw] md:px-[4vw] section-header-block'
+				style={{ marginBottom: 0 }}
+			>
 				<FadeIn>
 					<div
-						className='font-display uppercase tracking-[0.2em]'
+						className='font-display uppercase tracking-[0.2em] section-kicker'
 						style={{
 							fontSize: 'clamp(0.65rem, 0.8vw, 0.9rem)',
 							marginBottom: '3vh',
@@ -65,7 +68,7 @@ export function Skills() {
 				</FadeIn>
 				<FadeIn>
 					<h2
-						className='font-display'
+						className='font-display section-heading'
 						style={{
 							fontSize: 'clamp(3rem, 7vw, 7.5rem)',
 							lineHeight: 1,
@@ -78,6 +81,7 @@ export function Skills() {
 						Skills
 					</h2>
 					<div
+						className='section-heading-divider'
 						style={{
 							width: '100%',
 							height: '1px',

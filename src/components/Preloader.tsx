@@ -22,16 +22,16 @@ export function Preloader({ isComplete }: { isComplete: boolean }) {
 			initial={{ opacity: 1 }}
 			animate={isComplete ? { opacity: 0 } : { opacity: 1 }}
 			transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-			className='fixed inset-0 z-[999] flex items-center justify-center overflow-hidden'
+			className='fixed inset-0 z-999 flex items-center justify-center overflow-hidden preloader-mobile-shell'
 			style={{ backgroundColor: 'var(--theme-preloader-bg)' }}
 		>
-			<div className='flex flex-col items-center justify-center relative z-10'>
+			<div className='flex flex-col items-center justify-center relative z-10 preloader-mobile-content'>
 				{/* Name — Syne Bold */}
 				<motion.div
 					initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
 					animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
 					transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-					className='font-display text-center'
+					className='font-display text-center preloader-mobile-title'
 					style={{
 						fontSize: 'clamp(2.5rem, 7vw, 6rem)',
 						fontWeight: 800,
@@ -48,11 +48,11 @@ export function Preloader({ isComplete }: { isComplete: boolean }) {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.5, duration: 0.6 }}
-					className='mt-[4vh]'
+					className='mt-[4vh] preloader-mobile-bar'
 					style={{ width: 'clamp(80px, 8vw, 120px)' }}
 				>
 					<div
-						className='w-full h-[2px] relative overflow-hidden rounded-full'
+						className='w-full h-0.5 relative overflow-hidden rounded-full'
 						style={{ backgroundColor: 'var(--theme-border)' }}
 					>
 						<motion.div

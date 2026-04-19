@@ -304,14 +304,41 @@ button {
 		top: 0 !important;
 		left: 0 !important;
 		right: 0 !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		border-radius: 0 !important;
 	}
 
 	.nav-mobile-row {
 		height: var(--navbar-height, 60px) !important;
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
 	}
 
 	.nav-mobile-menu-panel {
 		top: var(--navbar-height, 60px) !important;
+	}
+
+	.preloader-mobile-shell {
+		min-height: 100svh;
+		padding-left: 1.25rem;
+		padding-right: 1.25rem;
+	}
+
+	.preloader-mobile-content {
+		width: 100%;
+		max-width: 28rem;
+	}
+
+	.preloader-mobile-title {
+		font-size: clamp(2rem, 12vw, 3.25rem) !important;
+		line-height: 0.96 !important;
+		text-wrap: balance;
+	}
+
+	.preloader-mobile-bar {
+		margin-top: 1.5rem !important;
+		width: clamp(110px, 36vw, 170px) !important;
 	}
 
 	.hero-mobile {
@@ -367,5 +394,27 @@ button {
 
 	.hero-mobile-badges {
 		gap: clamp(0.75rem, 3vw, 1.5rem) !important;
+	}
+
+	.section-header-block {
+		margin-bottom: clamp(2rem, 6vh, 3.5rem) !important;
+	}
+
+	.section-kicker {
+		font-size: clamp(0.62rem, 2.8vw, 0.78rem) !important;
+		letter-spacing: 0.16em !important;
+		margin-bottom: 0.9rem !important;
+	}
+
+	.section-heading {
+		font-size: clamp(1.7rem, 9.5vw, 2.5rem) !important;
+		line-height: 0.98 !important;
+		margin-bottom: 1rem !important;
+		letter-spacing: -0.015em !important;
+		overflow-wrap: anywhere;
+	}
+
+	.section-heading-divider {
+		margin-bottom: clamp(1.4rem, 4vh, 2rem) !important;
 	}
 }
