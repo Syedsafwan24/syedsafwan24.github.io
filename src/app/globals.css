@@ -417,4 +417,21 @@ button {
 	.section-heading-divider {
 		margin-bottom: clamp(1.4rem, 4vh, 2rem) !important;
 	}
+
+	#about,
+	#skills,
+	#projects,
+	#work,
+	#certifications {
+		padding-top: clamp(2.25rem, 5vh, 3.25rem) !important;
+		padding-bottom: clamp(2.25rem, 5vh, 3.25rem) !important;
+	}
+
+	#contact {
+		padding-top: clamp(2.25rem, 5vh, 3.25rem) !important;
+	}
+
+	.footer-mobile-spacer {
+		height: 3.2vh !important;
+	}
 }

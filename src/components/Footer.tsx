@@ -74,7 +74,7 @@ export function Footer() {
 							}}
 							onMouseEnter={() => setIsHovered(true)}
 							onMouseLeave={() => setIsHovered(false)}
-							data-cursor-text="Send Message"
+							data-cursor-text='Send Message'
 						>
 							<div
 								style={{
@@ -133,7 +133,7 @@ export function Footer() {
 				</FadeIn>
 
 				{/* Spacer */}
-				<div style={{ height: '9vh' }} />
+				<div className='footer-mobile-spacer' style={{ height: '9vh' }} />
 
 				{/* Bottom info row */}
 				<FadeIn delay={0.2}>
