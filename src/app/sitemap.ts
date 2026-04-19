@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sy3d.dev';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://syedsafwan.dev';
 
 export const dynamic = 'force-static';
 

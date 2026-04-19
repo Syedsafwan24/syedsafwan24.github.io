@@ -15,7 +15,7 @@ const syne = Syne({
 	weight: ['400', '500', '600', '700', '800'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sy3d.dev';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://syedsafwan.dev';
 const siteTitle = 'Syed Safwan Pirzade';
 const siteDescription =
 	'Frontend Developer building high-performance web products with Next.js, React, and modern UI systems.';
@@ -48,11 +48,20 @@ export const metadata: Metadata = {
 		siteName: siteTitle,
 		locale: 'en_US',
 		type: 'website',
+		images: [
+			{
+				url: '/opengraph-image',
+				width: 1200,
+				height: 630,
+				alt: `${siteTitle} | Frontend Developer`,
+			},
+		],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: `${siteTitle} | Portfolio`,
 		description: siteDescription,
+		images: ['/opengraph-image'],
 	},
 	robots: {
 		index: true,

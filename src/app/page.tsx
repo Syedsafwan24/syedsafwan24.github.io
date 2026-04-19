@@ -8,7 +8,7 @@ import { Experience } from '@/components/Experience';
 import { Certifications } from '@/components/Certifications';
 import { Footer } from '@/components/Footer';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sy3d.dev';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://syedsafwan.dev';
 
 const structuredData = {
 	'@context': 'https://schema.org',
