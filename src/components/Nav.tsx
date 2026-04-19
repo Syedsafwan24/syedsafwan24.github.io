@@ -59,11 +59,13 @@ export function Nav() {
 				borderRadius: scrolled ? '9999px' : '0px',
 				backgroundColor: scrolled
 					? 'var(--theme-navbar-blur-bg)'
-					: 'transparent',
+					: 'var(--theme-navbar-blur-bg-transparent)',
 				backdropFilter: scrolled
 					? 'blur(24px) saturate(170%)'
 					: 'blur(0px) saturate(100%)',
-				borderColor: scrolled ? 'var(--theme-border-strong)' : 'transparent',
+				borderColor: scrolled
+					? 'var(--theme-border-strong)'
+					: 'var(--theme-border-strong-transparent)',
 			}}
 			transition={{
 				duration: 0.62,

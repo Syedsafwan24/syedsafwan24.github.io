@@ -51,6 +51,8 @@
 	--theme-footer-text: #999999;
 	--theme-navbar-bg: #111111;
 	--theme-navbar-blur-bg: rgba(17, 17, 17, 0.62);
+	--theme-navbar-blur-bg-transparent: rgba(17, 17, 17, 0);
+	--theme-border-strong-transparent: rgba(255, 255, 255, 0);
 	--theme-navbar-link: #f5f0e8;
 	--theme-toggle-text: #f5f0e8;
 	--theme-toggle-border: rgba(255, 255, 255, 0.2);
@@ -98,6 +100,8 @@ html.light-mode {
 	--theme-footer-text: #888888;
 	--theme-navbar-bg: #f4f0e8;
 	--theme-navbar-blur-bg: rgba(244, 240, 232, 0.72);
+	--theme-navbar-blur-bg-transparent: rgba(244, 240, 232, 0);
+	--theme-border-strong-transparent: rgba(0, 0, 0, 0);
 	--theme-navbar-link: #111111;
 	--theme-toggle-text: #111111;
 	--theme-toggle-border: rgba(0, 0, 0, 0.25);
